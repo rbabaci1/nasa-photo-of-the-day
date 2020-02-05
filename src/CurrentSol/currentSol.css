@@ -1,16 +1,17 @@
 .current-sol {
   display: flex;
   justify-content: space-around;
-  max-width: 650px;
+  max-width: 800px;
   font-family: "Monaco";
   color: #fff;
-  background: rgba(4, 5, 4, 0.6);
+  background: rgba(4, 5, 4, 0.8);
   margin-top: 10px;
-  padding: 15px;
+  padding: 0 15px;
 }
 
 .current-sol div {
-  padding: 30px 10px;
+  padding: 10px 10px;
+  align-self: center;
 }
 
 .current-sol p {

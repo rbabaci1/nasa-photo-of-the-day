@@ -8,6 +8,7 @@ function CurrentSol({ sol, solNumber }) {
         <span>Sol {solNumber}</span>
         <p>{sol.Last_UTC}</p>
       </div>
+
       <div className="right-side">
         <p>
           <span>Season:</span> {sol.Season}
@@ -16,7 +17,7 @@ function CurrentSol({ sol, solNumber }) {
           <span>High:</span> {Math.round(sol.AT.mx)}° F | C
         </p>
         <p>
-          <span>Low:</span> {Math.round(sol.AT.mn)}° F |
+          <span>Low:</span> {Math.round(sol.AT.mn)}° F | C
         </p>
       </div>
     </div>

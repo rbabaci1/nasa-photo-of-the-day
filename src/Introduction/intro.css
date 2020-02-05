@@ -1,5 +1,5 @@
 .intro {
-  max-width: 650px;
+  max-width: 800px;
   color: gold;
   letter-spacing: 3px;
   background: rgba(39, 37, 37, 0.6);
@@ -7,16 +7,16 @@
 }
 
 .intro p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 35px;
   color: #fff;
   font-family: "Monaco";
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .intro h1 {
   margin: 0;
   font-family: monospace;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 30px;
 }
