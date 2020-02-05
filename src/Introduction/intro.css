@@ -1,0 +1,21 @@
+.intro {
+    max-width: 650px;
+    color: #0b0430;
+    letter-spacing: 3px;
+}
+
+.intro p {
+    font-size: 20px;
+    line-height: 35px;
+    color: #fff;
+    font-family: "Monaco";
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.intro h1 {
+    margin: 0;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 32px;
+}
