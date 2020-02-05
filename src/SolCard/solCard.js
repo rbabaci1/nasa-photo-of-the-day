@@ -11,6 +11,9 @@ function SolCard({ sol, solNumber }) {
 
       <div className="bottom">
         <p>
+          <span>Season:</span> {sol.Season}
+        </p>
+        <p>
           <span>High:</span> {Math.round(sol.AT.mx)}° F
         </p>
         <p>
