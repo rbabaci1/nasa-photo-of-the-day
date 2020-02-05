@@ -6,6 +6,8 @@ import axios from "axios";
 function SolCardCreation() {
   const [weatherData, setWeatherData] = useState([]);
 
+  useEffect(() => {}, []);
+
   return null;
 }
 
