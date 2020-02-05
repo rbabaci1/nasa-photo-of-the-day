@@ -1,6 +1,6 @@
 import react from "react";
 
-function SolCard() {
+function SolCard({ sol }) {
   return null;
 }
 
