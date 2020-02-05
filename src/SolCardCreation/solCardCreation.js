@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // import LastSol from "../LastSol/lastSol";
 import SolCard from "../SolCard/solCard";
 import axios from "axios";
+import "./solCards.css";
 
 function SolCardCreation() {
   const [weatherData, setWeatherData] = useState({});
@@ -32,7 +33,7 @@ function SolCardCreation() {
   return (
     <div className="weather-cards">
       {dataSolKeys.map(key => {
-        return <SolCard key={key} sol={weatherData[key]} />;
+        return <SolCard key={key} sol={weatherData[key]} solNumber={key} />;
       })}
     </div>
   );
