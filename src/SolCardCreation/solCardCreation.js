@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 // import LastSol from "../LastSol/lastSol";
 import SolCard from "../SolCard/solCard";
+import LastSol from "../LastSol/lastSol";
+
 import axios from "axios";
 import "./solCards.css";
 
@@ -22,8 +24,6 @@ function SolCardCreation() {
         setWeatherData(data);
         setDataSolKeys(keys);
         setFirsSol(keys[0]);
-
-        console.log(data);
       })
       .catch(error => console.error(error));
   }
