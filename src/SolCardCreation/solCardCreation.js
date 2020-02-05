@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import LastSol from "../LastSol/lastSol";
 import SolCard from "../SolCard/solCard";
-import LastSol from "../LastSol/lastSol";
+import CurrentSol from "../CurrentSol/currentSol";
 
 import axios from "axios";
 import "./solCards.css";
@@ -10,7 +9,8 @@ function SolCardCreation() {
   const [weatherData, setWeatherData] = useState({});
   const [dataSolKeys, setDataSolKeys] = useState([]);
 
-  const [firsSol, setFirsSol] = useState("");
+  const [lastSol, setLastSol] = useState("");
+  const [firstSol, setFirstSol] = useState("");
 
   function effectFunction() {
     axios
@@ -23,18 +23,26 @@ function SolCardCreation() {
 
         setWeatherData(data);
         setDataSolKeys(keys);
-        setFirsSol(keys[0]);
+
+        setLastSol(keys[keys.length - 1]);
+        setFirstSol(keys[0]);
       })
       .catch(error => console.error(error));
   }
 
-  useEffect(effectFunction, []);
+  useEffect(effectFunction, [firstSol]);
 
   return (
-    <div className="weather-cards">
-      {dataSolKeys.map(key => {
-        return <SolCard key={key} sol={weatherData[key]} solNumber={key} />;
-      })}
+    <div>
+      {lastSol ? (
+        <CurrentSol sol={weatherData[lastSol]} solNumber={lastSol} />
+      ) : null}
+
+      <div className="weather-cards">
+        {dataSolKeys.map(key => {
+          return <SolCard key={key} sol={weatherData[key]} solNumber={key} />;
+        })}
+      </div>
     </div>
   );
 }

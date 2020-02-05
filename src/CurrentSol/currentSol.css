@@ -1,0 +1,29 @@
+.current-sol {
+  display: flex;
+  justify-content: space-around;
+  max-width: 650px;
+  font-family: "Monaco";
+  color: #fff;
+  background: rgba(4, 5, 4, 0.5);
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.current-sol div {
+  padding: 30px 10px;
+}
+
+.current-sol p {
+  font-size: 21px;
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+.left-side {
+  text-align: center;
+}
+
+.left-side span {
+  font-size: 30px;
+  font-weight: bold;
+}
