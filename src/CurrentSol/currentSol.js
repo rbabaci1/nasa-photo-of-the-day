@@ -2,11 +2,14 @@ import React from "react";
 import "./currentSol.css";
 
 function CurrentSol({ sol, solNumber }) {
+  var date = new Date(sol.Last_UTC);
+  date = date.toString().replace(/\d{2}:.+/g, "");
+
   return (
     <div className="current-sol">
       <div className="left-side">
         <span>Sol {solNumber}</span>
-        <p>{sol.Last_UTC}</p>
+        <p>{date.toString()}</p>
       </div>
 
       <div className="right-side">

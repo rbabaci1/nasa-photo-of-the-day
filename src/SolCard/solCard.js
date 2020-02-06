@@ -2,11 +2,14 @@ import React from "react";
 import "./solCard.css";
 
 function SolCard({ sol, solNumber }) {
+  var date = new Date(sol.Last_UTC);
+  date = date.toString().replace(/\d{2}:.+/g, "");
+
   return (
     <div className="card">
       <div className="top">
         <span>Sol {solNumber}</span>
-        <p>{sol.Last_UTC}</p>
+        <p>{date}</p>
       </div>
 
       <div className="bottom">
