@@ -3,7 +3,7 @@ import SolCard from "../SolCard/solCard";
 import CurrentSol from "../CurrentSol/currentSol";
 
 import axios from "axios";
-import "./solCards.css";
+import "./solCardCreation.css";
 
 function SolCardCreation() {
   const [weatherData, setWeatherData] = useState({});
