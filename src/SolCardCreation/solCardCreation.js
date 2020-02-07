@@ -8,9 +8,7 @@ import "./solCardCreation.css";
 function SolCardCreation() {
   const [weatherData, setWeatherData] = useState({});
   const [dataSolKeys, setDataSolKeys] = useState([]);
-
   const [lastSol, setLastSol] = useState("");
-  const [firstSol, setFirstSol] = useState("");
 
   function effectFunction() {
     axios
@@ -23,14 +21,12 @@ function SolCardCreation() {
 
         setWeatherData(data);
         setDataSolKeys(keys);
-
         setLastSol(keys[keys.length - 1]);
-        setFirstSol(keys[0]);
       })
       .catch(error => console.error(error));
   }
 
-  useEffect(effectFunction, [firstSol]);
+  useEffect(effectFunction, [lastSol]);
 
   return (
     <div>
